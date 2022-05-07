@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>CPU-Scheduling</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <div class="bg-container">
+        <div>
+            Please select the Algorithm:
+
+            <!-- Taking input from the user -->
+            <form id="algorithm">
+                <input type="radio" name="algorithm" value="fcfs" checked /> First Come First Serve<br />
+                <input type="radio" name="algorithm" value="priority" /> Priority Scheduling<br />
+                <input type="radio" name="algorithm" value="sjf" /> Shortest Job First<br />
+                <input type="radio" name="algorithm" value="robin" /> Round Robin
+            </form>
+            <br>
+        </div>
+        <table id="inputTable">
+            <!-- Column headers -->
+            <tr>
+                <th>Process ID</th>
+                <th>Arrival Time</th>
+                <th>Burst Time</th>
+                <th class="priority-only">Priority</th>
+                <th class="res_time">Response Time</th>
+                <th class="wait_time">Waiting Time</th>
+                <th class="ta_time">Turnaround Time</th>
+            </tr>
+
+            <!-- Table row 1 - by default -->
+            <tr>
+                <td>P0</td>
+                <td>0</td>
+                <td><input class="initial exectime" type="text" aria-label="initial exectime" value="4" /></td>
+                <td class="priority-only initial"><input aria-label="priority-only" type="text" /></td>
+                <td class="res_time"></td>
+                <th class="wait_time"></td>
+                <th class="ta_time"></td>
+            </tr>
+
+            <!-- Table row 2 - by default -->
+            <tr>
+                <td>P1</td>
+                <td>1</td>
+                <td><input class="initial exectime" aria-label="2" value="2" /></td>
+                <td class="priority-only"><input aria-label="priority-only" type="text" /></td>
+                <td class="res_time"></td>
+                <td class="wait_time"></td>
+                <th class="ta_time"></td>
+            </tr>
+        </table>
+
+        <!-- Option to delete a row -->
+        <input id="minus" style="display: inline; left: 670px; position: absolute; top: 170px;" type="button"
+            value="Delete row" onclick="deleteRow();" />
+    </div>
+
+    <!-- Option to add a row -->
+    <input type="button" value="Add a row" onclick="addRow();" />
+    <div>
+    </div>
+
+    <!-- Option to show the quantum number as input -->
+    <p id="quantumParagraph" hidden>Quantum:
+        <input style="width: 50px;" id="quantum" type="text" value="5" />
+    </p>
+    <input type="button" value="Click here to proceed" onclick="draw();" />
+    <br /><br />
+
+    <fresh>
+    </fresh>
+    <p>
+        Total execution time: <strong id="timer"></strong> sec
+    </p>
+    <p id="ab">
+        Average Waiting time: <strong id="avg_wt"></strong> sec
+    </p>
+    <p id="cd">
+        Average Turnaround time: <strong id="avg_ta"></strong> sec
+    </p>
+</body>
+
+</html>
