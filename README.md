@@ -21,5 +21,5 @@
 > ![alt text](/images/Priority.jpeg)
 
 **Existing bugs –**
->	When you first open the website or reload it, the css of the delete row button is quite badly arranged
+>	When you first open the website or reload it, the css of the delete row button is quite badly arranged.
 >	To deal with this, you simply need to select any one of the algorithms apart from the FCFS, and then it will work absolutely fine without any errors.
