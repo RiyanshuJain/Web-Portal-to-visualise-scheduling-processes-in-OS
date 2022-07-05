@@ -4,6 +4,9 @@
 > Riyanshu Jain (B20AI060)
 > Tushar Kumar (B20AI048)
 
+**Link**
+> https://riyanshujain.github.io/Web-Portal-to-visualise-scheduling-processes-in-OS/
+
 **Steps to run the web portal on localhost:**
 > 1. Extract the zip file
 > 2. You will be able to see 3 files named as index.html, style.css, main.js
